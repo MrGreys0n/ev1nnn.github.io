@@ -1,0 +1,135 @@
+.fotos{
+    display: grid;
+    margin: 0;
+    margin-left: 4vw;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 5vw);
+    grid-gap: 15px;
+}
+
+.image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}   
+
+.foto1{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 5;
+}
+
+.foto2{
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 5;
+}
+
+.foto3{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: 10;
+}
+
+.foto4{
+    grid-column-start: 7;
+    grid-column-end: 10;
+    grid-row-start: 1;
+    grid-row-end: 5;
+}
+
+.foto5{
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 7;
+    grid-row-end: 10;
+}
+
+.foto6{
+    grid-column-start: 7;
+    grid-column-end: 10;
+    grid-row-start: 5;
+    grid-row-end: 10;
+}
+
+.foto7{
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 5;
+    grid-row-end: 7;
+}
+
+.foto8{
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 7;
+}
+
+.foto9{
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 7;
+    grid-row-end: 10;
+}
+
+.foto p{
+    visibility: hidden;
+}
+
+.foto:hover p{
+    visibility: visible;
+    margin: 0;
+    margin-top: -3vw;
+    width: 100%;
+    height: 2.5vw;
+    background-color: rgba(93, 28, 0, 0.807);
+    opacity: 0.8;
+    font-size: 2vw;
+    color: whitesmoke;
+}
+
+.foto:hover{
+    transform: scale(1.05);
+}
+
+.like{
+    background-color: transparent;
+    border: 0px;
+    height: 30px;
+    width: 30px;
+}
+
+.white_heart{
+    color: rgb(245, 171, 171);
+}
+
+.red_heart{
+    color: red;
+}
+
+.cont-drawer{
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    height: 400px;
+    width: 400px;
+    border: 3px;
+    border-color: blue;
+    font-family: 'Nunito', sans-serif;
+}
+
+.container .box{
+    position:relative;
+    width:320px;
+    height:400px;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    margin: 40px 30px;
+    transition: 0.5s;
+
+}

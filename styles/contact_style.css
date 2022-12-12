@@ -1,0 +1,162 @@
+form{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    grid-gap: 15px;
+    background-color:rgba(68, 23, 0, 0.73);
+    color: whitesmoke;
+    width: 70vw;    
+    height: 30vw;
+    margin: 0 auto;  
+    align-items: center;
+    margin-top: 100px;
+    backdrop-filter: blur(10px);
+    z-index: 13;
+}
+
+form h3{
+    object-fit: contain;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+.name{
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.surname{
+    grid-column-start: 5;
+    grid-column-end: 8;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.email{
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 5;
+    grid-row-end: 6;
+}
+
+.tel{
+    grid-column-start: 5;
+    grid-column-end: 8;
+    grid-row-start: 5;
+    grid-row-end: 6;
+}
+
+.message_field{
+    grid-column-start: 2;
+    grid-column-end: 8;
+    grid-row-start: 7;
+    grid-row-end: 8;
+}
+
+.button1{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 8;
+    grid-row-end: 9;
+}
+
+.button2{
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 8;
+    grid-row-end: 9;
+}
+
+input{
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #411a00;
+}
+
+input:focus{
+    border: 1px solid #402405;
+    background-color: #402405;
+    outline: none;
+    transition: 1s ease-in-out;  
+}
+
+*::placeholder{
+    color: whitesmoke;
+}
+
+input:focus::placeholder{
+    color: whitesmoke;
+    transition: 1s ease-in-out;
+}
+
+
+@media(max-width:870px){
+    form{
+        width: 80vw;
+        height: 600px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(12, 1fr);
+    }
+
+    form h3{
+        object-fit: contain;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+
+    .name{
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+
+    .surname{
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 4;
+        grid-row-end: 4;
+    }
+
+    .email{
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 6;
+        grid-row-end: 6;
+    }
+
+    .tel{
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 8;
+        grid-row-end: 8;
+    }
+
+    .message_field{
+        grid-column-start: 2;
+        grid-column-end: 4;
+        width: 70vw;
+        grid-row-start: 10;
+        grid-row-end: 10;
+    }
+
+    .button1{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 11;
+        grid-row-end: 11
+    }
+
+    .button2{
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 11;
+        grid-row-end: 11
+    }
+}

@@ -1,0 +1,205 @@
+
+
+.block1,.block2,.block3,.block4{
+    position: absolute;
+    background-color: rgba(15, 35, 66, 0.257);
+    width: 50px;
+    height: 50px;
+}
+.block1{
+    top: 250px;
+    left: calc(2*(85%/3));
+    animation: b1 10s infinite normal linear 0s running ;
+}
+.block4{
+    top:200px;
+    left:0px;
+    animation: b4 11s infinite alternate linear 0s running ;
+}
+.block2{
+    top:0px;
+    left:calc(100%/2.5);
+    z-index: 14;
+    animation: b2 5s infinite  alternate linear 0s running ;
+}
+.block3{
+    width: 25px;
+    height: 25px;
+    top:395px;
+    left:calc(100%/4);
+    z-index: 14;
+    animation: b3 12s infinite  alternate linear 0s running ;
+}
+@keyframes b1 {
+
+    30%{
+        transform: rotate(120deg);
+        top: 150px;
+        left: calc(3*(85%/3));
+
+    }
+    60%{
+        transform: rotate(240deg);
+        top: 400px;
+    }
+    to{
+        transform: rotate(360deg);
+        top: 250px;
+        left: calc(2*(85%/3));
+    }
+
+}
+@keyframes b4 {
+    from{
+        top:200px;
+        left:0px;
+    }
+
+    to{
+        top: 0;
+        left: calc(90%);
+        right: 0;
+    }
+
+}
+@keyframes b2 {
+    from{
+        transform: scale(0.5);
+        top:0px;
+        left:calc(100%/2.5);
+    }
+
+    to{
+        top: 185px;
+        left:calc(100%/3.0);
+    }
+
+}
+@keyframes b3 {
+    from{
+        left: 0;
+        top: -100px;
+    }
+
+    to{
+        left:calc(2.4*(100%/4));
+        transform: rotate(250deg);
+    }
+}
+
+
+
+.card{
+    position: relative;
+    margin-top: 90px;
+    min-height: 250px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+article{
+    position: relative;
+    width: 150px;
+    overflow: hidden;
+}
+
+p{
+    color: bisque;
+}
+
+.gr-block{
+    position: relative;
+    top:10px;
+    width: 100px;
+    height: 220px;
+    margin: 0 auto;
+    background:linear-gradient(45deg,rgb(117, 82, 18) 20%,#3a2700 50%, #77491e 70%);
+    transform: skewX(10deg);
+    box-shadow:0 0 15px #5f3410;
+
+}
+.text-block{
+    backdrop-filter: blur(5px);
+    background-color: rgba(66, 41, 15, 0.638);
+    position: absolute;
+    top:50px;
+    height: 150px;
+    width: 200px;
+}
+.card article::after, .card article::before{
+    display: block;
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 25px;
+    backdrop-filter: blur(5px);
+    background-color: rgba(15, 35, 66, 0.104);
+}
+.card article::before{
+    top:-25px;
+    left:0;
+}
+.card article::after{
+    top:100%;
+    right: 0;
+}
+.card article:hover .gr-block{
+    transform: skewX(0deg);
+
+}
+.card article:hover::after{
+    top:87%;
+    animation: anav 6s infinite normal linear 0s;
+
+}
+.card article:hover::before{
+    z-index: 3;
+    top:0;
+    animation: bnav 6s infinite normal linear 0s;
+
+}
+@keyframes anav {
+    25%{
+        top:87%;
+        right: 80%;
+
+    }
+    50%{
+        top:82%;
+        right: 80%;
+
+    }
+    75%{
+        top:82%;
+        right: 0%;
+
+    }
+    100%{
+        right: 0%;
+        top:87%
+    }
+
+}
+@keyframes bnav {
+    25%{
+        top:0;
+        left:80%;
+
+    }
+    50%{
+        top:5%;
+        left: 80%;
+
+    }
+    75%{
+        top:5%;
+        left: 0%;
+
+    }
+    100%{
+        left: 0%;
+        top:0%
+    }
+}
